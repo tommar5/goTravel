@@ -1,0 +1,16 @@
+country:
+  index:
+    label:
+      page_title: 'Countries'
+      table_title: 'Countries Table'
+  edit:
+    label:
+  add:
+    label:
+
+flashes:
+  user:
+    edit:
+      success: 'User successfully updated.'
+    add:
+      success: 'User successfully created.'

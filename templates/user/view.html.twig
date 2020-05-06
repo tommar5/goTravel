@@ -1,0 +1,142 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User View Page{% endblock %}
+
+{% block body %}
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">{{ user.userFullName }}</h1>
+    <p class="mb-4"></p>
+
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-xl-3 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-pie pt-4">
+                        <img class="img-profile rounded-circle" style="margin: auto; display: block" src="https://source.unsplash.com/QAB-WJcbgJk/250x250">
+                    </div>
+                    <hr>
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2 mb-3">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Email</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ user.email }}</div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2 mb-3">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Roles</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ user.userRoles }}</div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters align-items-right">
+                        <div class="col mr-2 mb-3">
+                            Edit <i class="fas fa-fw fa-pencil"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-9 col-lg-7">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Assigned Enquiries</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Traveller</th>
+                                <th>Type</th>
+                                <th>Departure Date</th>
+                                <th>Created Date</th>
+                                <th>Marketing</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for enquiry in user.enquiries %}
+                                <tr>
+                                    <td><a href="{{ path('app-enquiry-view', {'id': enquiry.id}) }}">#{{ enquiry.id }}</a></td>
+                                    <td><a href="{{ path('app-traveller-view', {'id': enquiry.existingTraveller.id}) }}">{{ enquiry.existingTraveller.fullName }}</a></td>
+                                    <td>{{ enquiry.type }}</td>
+                                    <td>{{ enquiry.departure|date('Y-m-d') }}</td>
+                                    <td>{{ enquiry.createdAt|date('Y-m-d') }}</td>
+                                    <td>{% if enquiry.marketingConsent %}YES{% else %}-{% endif %}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Assigned Quotes</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Traveller</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Assigned At</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for quote in user.quotes %}
+                                <tr>
+                                    <td><a href="{{ path('app-quote-view', {'id': quote.id}) }}">#{{ quote.id }}</a></td>
+                                    <td><a href="{{ path('app-traveller-view', {'id': quote.traveller.id}) }}">{{ quote.traveller.fullName }}</a></td>
+                                    <td>{{ quote.type }}</td>
+                                    <td>{{ quote.status }}</td>
+                                    <td>{{ quote.assignedAt|date('Y-m-d') }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+{#            <div class="card shadow mb-4">#}
+{#                <div class="card-header py-3">#}
+{#                    <h6 class="m-0 font-weight-bold text-primary">Assigned Bookings</h6>#}
+{#                </div>#}
+{#                <div class="card-body">#}
+{#                    <div class="table-responsive">#}
+{#                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">#}
+{#                            <thead>#}
+{#                            <tr>#}
+{#                                <th>ID</th>#}
+{#                                <th>Traveller</th>#}
+{#                                <th>Type</th>#}
+{#                                <th>Departure Date</th>#}
+{#                                <th>Created Date</th>#}
+{#                                <th>Marketing</th>#}
+{#                            </tr>#}
+{#                            </thead>#}
+{#                            <tbody>#}
+{#                            {% for enquiry in user.enquiries %}#}
+{#                                <tr>#}
+{#                                    <td><a href="{{ path('app-enquiry-view', {'id': enquiry.id}) }}">#{{ enquiry.id }}</a></td>#}
+{#                                    <td><a href="{{ path('app-traveller-view', {'id': enquiry.existingTraveller.id}) }}">{{ enquiry.existingTraveller.fullName }}</a></td>#}
+{#                                    <td>{{ enquiry.type }}</td>#}
+{#                                    <td>{{ enquiry.departure|date('Y-m-d') }}</td>#}
+{#                                    <td>{{ enquiry.createdAt|date('Y-m-d') }}</td>#}
+{#                                    <td>{% if enquiry.marketingConsent %}YES{% else %}-{% endif %}</td>#}
+{#                                </tr>#}
+{#                            {% endfor %}#}
+{#                            </tbody>#}
+{#                        </table>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,176 @@
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ path('app-enquiry-list') }}">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-globe-europe"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Go Travel</div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        CRM
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEnquiry" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-comment"></i>
+            <span>Enquiries</span>
+        </a>
+        <div id="collapseEnquiry" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ path('app-enquiry-list') }}">Enquiries</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseQuote" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-comments"></i>
+            <span>Quotes</span>
+        </a>
+        <div id="collapseQuote" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ path('app-quote-list') }}">Quotes</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBooking" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-globe"></i>
+            <span>Bookings</span>
+        </a>
+        <div id="collapseBooking" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ path('app-booking-list') }}">Bookings</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLocation" aria-expanded="true" aria-controls="collapseLocation">
+            <i class="fas fa-fw fa-compass"></i>
+            <span>Locations</span>
+        </a>
+        <div id="collapseLocation" class="collapse" aria-labelledby="headingLocation" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ path('app-airport-list') }}">Airports</a>
+                <a class="collapse-item" href="{{ path('app-train-station-list') }}">Train Stations</a>
+                <a class="collapse-item" href="{{ path('app-ship-port-list') }}">Ship Ports</a>
+                <a class="collapse-item" href="{{ path('app-city-list') }}">Cities</a>
+                <a class="collapse-item" href="{{ path('app-country-list') }}">Countries</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Suppliers
+    </div>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFlights" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-plane"></i>
+            <span>Flights</span>
+        </a>
+        <div id="collapseFlights" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="utilities-color.html">Airlines</a>
+                <a class="collapse-item" href="utilities-color.html">Flights</a>
+                <a class="collapse-item" href="utilities-color.html">Planes</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAccommodations" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-hotel"></i>
+            <span>Accommodations</span>
+        </a>
+        <div id="collapseAccommodations" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="utilities-color.html">Hotels</a>
+                <a class="collapse-item" href="utilities-color.html">Rooms</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRails" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-train"></i>
+            <span>Rails</span>
+        </a>
+        <div id="collapseRails" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="utilities-color.html">Trains</a>
+                <a class="collapse-item" href="utilities-color.html">Trips</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCruises" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-ship"></i>
+            <span>Cruises</span>
+        </a>
+        <div id="collapseCruises" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="utilities-color.html">Cruises</a>
+                <a class="collapse-item" href="utilities-color.html">Ships</a>
+                <a class="collapse-item" href="utilities-color.html">Trips</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-umbrella-beach"></i>
+            <span>Holidays</span>
+        </a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        People
+    </div>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ path('app-traveller-list') }}" >
+            <i class="fas fa-fw fa-users"></i>
+            <span>Travellers</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ path('app-users-list') }}" >
+            <i class="fas fa-fw fa-user-tie"></i>
+            <span>Users</span>
+        </a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+</ul>
+<!-- End of Sidebar -->

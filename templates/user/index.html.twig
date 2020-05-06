@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Users List{% endblock %}
+
+{% block body %}
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">{{ 'user.index.label.page_title'|trans  }}</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Users Table</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Created At</th>
+                        <th>Is Active</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Created At</th>
+                        <th>Is Active</th>
+                        <th>Actions</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td><a href="{{ path('app-user-view', {'id': user.id}) }}">{{ user.userFullName }}</a></td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.userRoles }}</td>
+                            <td>{{ user.createdAt|date('Y-m-d') }}</td>
+                            <td>{{ user.isActive }}</td>
+                            <td>
+                                <a href="{{ path('app-user-view', {'id': user.id}) }}" style="color: unset; text-decoration: none">
+                                    <i class="fas fa-fw fa-eye"></i>
+                                </a>
+                                <a href="{{ path('app-user-delete', {'id': user.id}) }}">
+                                    <i class="fas fa-fw fa-trash alert-danger" style="background: none"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

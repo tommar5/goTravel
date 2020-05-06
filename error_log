@@ -1,0 +1,15 @@
+[25-Mar-2020 20:49:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 397312 bytes) in /var/www/goTravel/vendor/symfony/dependency-injection/Dumper/PhpDumper.php on line 243
+[26-Mar-2020 11:24:49 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32768 bytes) in /var/www/goTravel/vendor/symfony/var-dumper/Cloner/Data.php on line 331
+[29-Mar-2020 14:10:42 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 16384 bytes) in /var/www/goTravel/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php on line 121
+[29-Mar-2020 14:10:42 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 32768 bytes) in /var/www/goTravel/vendor/symfony/error-handler/Error/OutOfMemoryError.php on line 1
+[29-Mar-2020 15:25:34 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /var/www/goTravel/vendor/doctrine/orm/lib/Doctrine/ORM/Internal/Hydration/AbstractHydrator.php on line 389
+[29-Mar-2020 15:25:34 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 32768 bytes) in /var/www/goTravel/vendor/symfony/error-handler/Error/OutOfMemoryError.php on line 1
+[29-Mar-2020 15:30:41 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /var/www/goTravel/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php on line 691
+[29-Mar-2020 15:30:41 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /var/www/goTravel/vendor/symfony/error-handler/ErrorHandler.php on line 647
+[30-Mar-2020 15:59:51 UTC] PHP Fatal error:  Cannot declare class App\Repositoty\Airline\AirlineRepository, because the name is already in use in /var/www/goTravel/src/Repository/Airline/AirlineRepository.php on line 7
+[30-Mar-2020 16:02:05 UTC] PHP Fatal error:  Cannot declare class App\Repositoty\Airline\AirlineRepository, because the name is already in use in /var/www/goTravel/src/Repository/Airline/AirlineRepository.php on line 7
+[30-Mar-2020 16:03:38 UTC] PHP Fatal error:  Cannot declare class App\Repositoty\Airline\AirlineRepository, because the name is already in use in /var/www/goTravel/src/Repository/Airline/AirlineRepository.php on line 7
+[30-Mar-2020 16:12:47 UTC] PHP Fatal error:  Cannot declare class App\Repositoty\Airline\AirlineRepository, because the name is already in use in /var/www/goTravel/src/Repository/Airline/AirlineRepository.php on line 7
+[30-Mar-2020 16:13:14 UTC] PHP Fatal error:  Cannot declare class App\Repositoty\Airline\AirlineRepository, because the name is already in use in /var/www/goTravel/src/Repository/Airline/AirlineRepository.php on line 7
+[28-Apr-2020 16:01:39 UTC] 2020-04-28T16:01:39+00:00 [critical] Uncaught Error: syntax error, unexpected ','
+[28-Apr-2020 16:03:12 UTC] 2020-04-28T16:03:12+00:00 [critical] Uncaught Error: syntax error, unexpected ','

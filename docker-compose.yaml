@@ -1,0 +1,45 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:5.6
+    networks:
+      - gotravel
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./:/var/www/goTravel
+    environment:
+      MYSQL_DB: goTravel
+      MYSQL_ROOT_PASSWORD: gotravel
+
+  php:
+    build: docker/php-fpm
+    networks:
+      - gotravel
+    ports:
+      - '9002:9000'
+    volumes:
+      - ./:/var/www/goTravel
+      - ./logs/symfony:/var/www/goTravel/var/logs
+      - ./php.ini:/usr/local/etc/php/php.ini
+    links:
+      - mysql
+
+  nginx:
+    build: docker/nginx
+    environment:
+      VIRTUAL_HOST: "go-travel.com"
+    networks:
+      - gotravel
+    ports:
+      - '81:80'
+    links:
+      - php
+    volumes_from:
+      - php
+    volumes:
+      - ./logs/nginx/:/var/log/nginx
+
+networks:
+  gotravel:
+    driver: bridge
